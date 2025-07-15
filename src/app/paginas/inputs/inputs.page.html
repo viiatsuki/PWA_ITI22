@@ -1,0 +1,54 @@
+<app-header titulo="Inputs"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">A Paterno</ion-label>
+      <ion-input type="text" [(ngModel)]="apellidoPaterno" name="apellidoPaterno"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">A Materno</ion-label>
+      <ion-input type="text" [(ngModel)]="apellidoMaterno" name="apellidoMaterno"></ion-input>
+    </ion-item>
+
+    <!-- Campo Edad con ngModel -->
+    <ion-item>
+      <ion-label position="floating">Edad</ion-label>
+      <ion-input 
+        type="number" 
+        [(ngModel)]="edad" 
+        name="edad" 
+        readonly>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="correo" name="correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input type="tel" [(ngModel)]="telefono" name="telefono"></ion-input>
+    </ion-item>
+
+    <!-- Fecha de nacimiento con ngModel y evento -->
+    <ion-item>
+      <ion-label position="floating">Fecha de nacimiento</ion-label>
+      <ion-datetime 
+        presentation="date"
+        [(ngModel)]="fechaNacimiento"
+        (ionChange)="calcularEdad()"
+        name="fechaNacimiento">
+      </ion-datetime>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

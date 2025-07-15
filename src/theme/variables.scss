@@ -1,2 +1,65 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-whats: #A97FB9;
+	--ion-color-whats-rgb: 169, 127, 185, 1;
+	--ion-color-whats-contrast: #ffffff;
+	--ion-color-whats-contrast-rgb: 0,0,0;
+	--ion-color-whats-shade: #0075cf;
+	--ion-color-whats-tint: #1a91ed;
+    
+	--ion-color-face: #46BE25;
+	--ion-color-face-rgb: 70, 190, 37, 1;
+	--ion-color-face-contrast: #ffffff;
+	--ion-color-face-contrast-rgb: 0,0,0;
+	--ion-color-face-shade: #0075cf;
+	--ion-color-face-tint: #1a91ed;
+    
+    --ion-color-youtube: #D8AABC;
+	--ion-color-youtube-rgb: 216, 170, 188, 1;
+	--ion-color-youtube-contrast: #ffffff;
+	--ion-color-youtube-contrast-rgb: 0,0,0;
+	--ion-color-youtube-shade: #0075cf;
+	--ion-color-youtube-tint: #1a91ed;
+
+    --ion-color-x: #9dabff;
+	--ion-color-x-rgb: 157, 171, 255, 1;
+	--ion-color-x-contrast: #ffffff;
+	--ion-color-x-contrast-rgb: 0,0,0;
+	--ion-color-x-shade: #0075cf;
+	--ion-color-x-tint: #1a91ed;
+}
+
+.ion-color-whats {
+    --ion-color-base: var(--ion-color-linke) !important;
+    --ion-color-base-rgb: var(--ion-color-linke-rgb) !important;
+    --ion-color-contrast: var(--ion-color-linke-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-linke-shade) !important;
+    --ion-color-color-tint: var(--ion-color-linke-tint) !important;
+}
+
+.ion-color-face {
+    --ion-color-base: var(--ion-color-face) !important;
+    --ion-color-base-rgb: var(--ion-color-face-rgb) !important;
+    --ion-color-contrast: var(--ion-color-face-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-face-shade) !important;
+    --ion-color-color-tint: var(--ion-color-face-tint) !important;
+}
+
+.ion-color-youtube {
+    --ion-color-base: var(--ion-color-youtube) !important;
+    --ion-color-base-rgb: var(--ion-color-youtube-rgb) !important;
+    --ion-color-contrast: var(--ion-color-youtube-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-youtube-shade) !important;
+    --ion-color-color-tint: var(--ion-color-youtube-tint) !important;
+}
+
+.ion-color-x {
+    --ion-color-base: var(--ion-color-x) !important;
+    --ion-color-base-rgb: var(--ion-color-x-rgb) !important;
+    --ion-color-contrast: var(--ion-color-x-contrast) !important;
+    --ion-color-contrast-rgb: var(--ion-color-contrast-rgb) !important;
+    --ion-color-shade: var(--ion-color-x-shade) !important;
+    --ion-color-color-tint: var(--ion-color-x-tint) !important;
+}

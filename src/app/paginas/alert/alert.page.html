@@ -1,0 +1,43 @@
+<app-header titulo="alerta"></app-header>
+
+
+<ion-content [fullscreen]="true">
+<ion-button (click)="presentAlert()">Click Me</ion-button>
+<ion-button id="present-alert">Inputs</ion-button>
+<ion-button (click)="showAlertPersonalizada()">Alerta Personalizada</ion-button>
+
+<ion-button id="console-alert">Console Alert</ion-button>
+<ion-alert
+  trigger="console-alert"
+  header="Alert!"
+  [buttons]="ConsoleButtons"
+  (didDismiss)="setResult($event)"
+></ion-alert>
+
+<ion-alert
+  trigger="present-alert"
+  header="Please enter your info"
+  [buttons]="alertButtons"
+  [inputs]="alertInputs"
+></ion-alert>
+</ion-content>
+<!--ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alert</ion-title>
+  <ion-buttons> 
+    <ion-back-button 
+    defaultHref="/"
+    text="regresar"
+    color="tertiary">
+  </ion-back-button>
+  </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alert</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>-->

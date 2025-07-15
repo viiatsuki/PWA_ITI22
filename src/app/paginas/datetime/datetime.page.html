@@ -1,0 +1,15 @@
+<app-header titulo="datetime"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    
+    <ion-label>Fecha Actual</ion-label>
+    <ion-datetime 
+      [value]="fechaActual.toISOString()"
+      (ionChange)="fechaCambiada($event)"
+      min="2025-01-01T00:00:00"
+      max="2025-07-31T23:59:59">
+    ></ion-datetime>
+
+  </ion-item>
+</ion-content>

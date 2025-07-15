@@ -1,0 +1,14 @@
+<app-header titulo="Infinite"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item *ngFor="let d of datos; let i=index" >
+      <ion-label>hola{{i+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="dots"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
