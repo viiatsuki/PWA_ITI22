@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
 {
@@ -13,56 +14,69 @@ const routes: Routes = [
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./paginas/inicio/inicio.module').then(m => m.InicioPageModule)
+    loadChildren: () => import('./paginas/inicio/inicio.module').then(m => m.InicioPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'alert',
-    loadChildren: () => import('./paginas/alert/alert.module').then(m => m.AlertPageModule)
+    loadChildren: () => import('./paginas/alert/alert.module').then(m => m.AlertPageModule),
+    canActivate: [AuthGuard]
   },
    {
     path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    canActivate: [AuthGuard]
   },
 
   {
     path: 'card',
-    loadChildren: () => import('./paginas/card/card.module').then( m => m.CardPageModule)
+    loadChildren: () => import('./paginas/card/card.module').then( m => m.CardPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'datetime',
-    loadChildren: () => import('./paginas/datetime/datetime.module').then( m => m.DatetimePageModule)
+    loadChildren: () => import('./paginas/datetime/datetime.module').then( m => m.DatetimePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'checkbox',
-    loadChildren: () => import('./paginas/checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+    loadChildren: () => import('./paginas/checkbox/checkbox.module').then( m => m.CheckboxPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'fab',
-    loadChildren: () => import('./paginas/fab/fab.module').then( m => m.FabPageModule)
+    loadChildren: () => import('./paginas/fab/fab.module').then( m => m.FabPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'infinite',
-    loadChildren: () => import('./paginas/infinite/infinite.module').then( m => m.InfinitePageModule)
+    loadChildren: () => import('./paginas/infinite/infinite.module').then( m => m.InfinitePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'inputs',
-    loadChildren: () => import('./paginas/inputs/inputs.module').then( m => m.InputsPageModule)
+    loadChildren: () => import('./paginas/inputs/inputs.module').then( m => m.InputsPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'grid',
-    loadChildren: () => import('./paginas/grid/grid.module').then( m => m.GridPageModule)
+    loadChildren: () => import('./paginas/grid/grid.module').then( m => m.GridPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'modal',
-    loadChildren: () => import('./paginas/modal/modal.module').then( m => m.ModalPageModule)
+    loadChildren: () => import('./paginas/modal/modal.module').then( m => m.ModalPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'popover',
-    loadChildren: () => import('./paginas/popover/popover.module').then( m => m.PopoverPageModule)
+    loadChildren: () => import('./paginas/popover/popover.module').then( m => m.PopoverPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'list',
-    loadChildren: () => import('./paginas/list/list.module').then( m => m.ListPageModule)
+    loadChildren: () => import('./paginas/list/list.module').then( m => m.ListPageModule),
+    canActivate: [AuthGuard]
   },
 ];
 @NgModule({

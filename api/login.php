@@ -19,7 +19,7 @@ if ($username === '' || $password === '') {
 	exit();
 }
 
-$stmt = $mysqli->prepare('SELECT `ID`, `usuario`, `contraseña` FROM `usuarios` WHERE `usuario` = ? LIMIT 1');
+$stmt = $mysqli->prepare('SELECT `id`, `usuario`, `contrasena` FROM `usuarios` WHERE `usuario` = ? LIMIT 1');
 if (!$stmt) {
 	http_response_code(500);
 	echo json_encode(['ok' => false, 'error' => 'Query prepare failed']);
@@ -38,7 +38,7 @@ if (!$user) {
 }
 
 // Plain-text password check (replace with password_hash in production)
-if ($password !== $user['contraseña']) {
+if ($password !== $user['contrasena']) {
 	http_response_code(401);
 	echo json_encode(['ok' => false, 'error' => 'Credenciales invalidas']);
 	exit();
@@ -47,7 +47,7 @@ if ($password !== $user['contraseña']) {
 echo json_encode([
 	'ok' => true,
 	'user' => [
-		'ID' => (int)$user['ID'],
+		'ID' => (int)$user['id'],
 		'usuario' => $user['usuario']
 	]
 ]);

@@ -1,6 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="danger">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar Sesión
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -11,12 +17,29 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- Información del usuario -->
+  <ion-card *ngIf="currentUser" style="margin: 16px;">
+    <ion-card-header>
+      <ion-card-title>¡Bienvenido!</ion-card-title>
+      <ion-card-subtitle>Usuario: {{ currentUser.usuario }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Has iniciado sesión correctamente. ID de usuario: {{ currentUser.ID }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lista de elementos -->
   <ion-list>
-    <ion-item *ngFor="let e of Elementos" [routerLink]="e.redirectTo"><ion-icon [name]="e.icon" slot="start" color="tertiary"></ion-icon>{{e.name}}</ion-item>
-      
+    <ion-item *ngFor="let e of Elementos" [routerLink]="e.redirectTo">
+      <ion-icon [name]="e.icon" slot="start" color="tertiary"></ion-icon>
+      {{e.name}}
+    </ion-item>
   </ion-list>
 
-  <ion-button routerLink="/card">Card</ion-button>
-  <ion-button routerLink="/alert" >Alert</ion-button>
-  <ion-button routerLink="/datetime" >Datetime</ion-button>
+  <!-- Botones adicionales -->
+  <div style="padding: 16px;">
+    <ion-button routerLink="/card" expand="block" style="margin-bottom: 8px;">Card</ion-button>
+    <ion-button routerLink="/alert" expand="block" style="margin-bottom: 8px;">Alert</ion-button>
+    <ion-button routerLink="/datetime" expand="block" style="margin-bottom: 8px;">Datetime</ion-button>
+  </div>
 </ion-content>

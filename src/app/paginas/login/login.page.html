@@ -5,21 +5,21 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-	<form [formGroup]="form" (ngSubmit)="submit()">
-		<ion-item>
-			<ion-label position="floating">Usuario</ion-label>
-			<ion-input formControlName="usuario" autocomplete="username"></ion-input>
-		</ion-item>
+	<ion-item>
+		<ion-label position="floating">Usuario</ion-label>
+		<ion-input [(ngModel)]="usuario" autocomplete="username"></ion-input>
+	</ion-item>
 
-		<ion-item>
-			<ion-label position="floating">Contraseña</ion-label>
-			<ion-input type="password" formControlName="contrasena" autocomplete="current-password"></ion-input>
-		</ion-item>
+	<ion-item>
+		<ion-label position="floating">Contraseña</ion-label>
+		<ion-input type="password" [(ngModel)]="contrasena" autocomplete="current-password"></ion-input>
+	</ion-item>
 
-		<div *ngIf="errorMessage" style="color: var(--ion-color-danger); margin-top: 8px;">{{ errorMessage }}</div>
+	<ion-button expand="block" (click)="login()" style="margin-top: 16px;">
+		Ingresar
+	</ion-button>
 
-		<ion-button expand="block" type="submit" [disabled]="isSubmitting || form.invalid" style="margin-top: 16px;">
-			{{ isSubmitting ? 'Ingresando...' : 'Ingresar' }}
-		</ion-button>
-	</form>
+	<ion-button expand="block" fill="outline" (click)="testConnection()" style="margin-top: 8px;">
+		Probar Conexión
+	</ion-button>
 </ion-content>
