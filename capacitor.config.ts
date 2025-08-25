@@ -1,9 +1,14 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'mx.yubia.app',
   appName: 'APPITI22Tab',
-  webDir: 'www'
-};
+  webDir: 'www',
+  plugins: {
+    PushNotification: {
+      presentationOptions: ["badge", "sound", "alert"],
+    },
+}
+ }
 
-export default config;
+ export default config;
